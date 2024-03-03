@@ -5,7 +5,7 @@ pipeline{
     }
     
     parameters{
-        string(name: "SPEC", defaultValue: "cypress/e2s/**/**", description:"")
+        string(name: "SPEC", defaultValue: "cypress/e2e/**/**", description:"")
         choice(name: "BROWSER", choices: ['chrome', 'edge', 'firefox'], description: "")  
     }
     
