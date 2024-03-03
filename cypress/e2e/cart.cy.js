@@ -1,8 +1,8 @@
-describe('login spec', () => {
+describe('cart spec', () => {
     beforeEach(()=>{
         cy.visit('https://www.saucedemo.com/')
     })
-    it('login successfuly', () => {
+    it('add to cart successfuly one product', () => {
       
       cy.get('[data-test="username"]').type('standard_user')
       cy.get('[data-test="password"]').type('secret_sauce')
