@@ -6,7 +6,7 @@ pipeline{
         choice(name: "BROWSER", choices: ['chrome', 'edge', 'firefox'], description: "")  
     }
     
-    option{
+    options{
         ansiColor('xterm')
     }
 
