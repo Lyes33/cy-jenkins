@@ -5,8 +5,8 @@ pipeline{
     }
     
     parameters{
-        string(name: "SPEC", defaultValue: "cypress/e2e/**/**", description:"")
-        choice(name: "BROWSER", choices: ['chrome', 'edge', 'firefox'], description: "")  
+        string(name: "SPEC", defaultValue: "cypress/e2e/**/**", description:"Entrer le chemin des testsà éxecuter")
+        choice(name: "BROWSER", choices: ['chrome', 'edge', 'firefox'], description: "Choisir le navigateur")  
     }
     
     stages{
