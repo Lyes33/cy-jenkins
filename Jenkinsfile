@@ -6,14 +6,6 @@ pipeline{
         choice(name: "BROWSER", choices: ['chrome', 'edge', 'firefox'], description: "")  
     }
     
-    options{
-        ansiColor('xterm')
-        environment {
-            MAVEN_OPTS = '-Djansi.force=true'
-        }
-
-    }
-
     stages{
         stage('Build'){
             steps{
