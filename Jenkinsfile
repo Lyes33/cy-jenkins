@@ -8,6 +8,10 @@ pipeline{
     
     options{
         ansiColor('xterm')
+        environment {
+            MAVEN_OPTS = '-Djansi.force=true'
+        }
+
     }
 
     stages{
