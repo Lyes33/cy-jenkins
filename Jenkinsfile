@@ -30,7 +30,7 @@ pipeline{
 
     post{
         always{
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: '/Users/benaouadi/Desktop/sause-demo/cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
         }
     }
 }
