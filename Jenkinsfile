@@ -1,9 +1,6 @@
 pipeline{
     agent any
-    tools {
-        nodejs '18.14.2'
-    }
-    
+  
     parameters{
         string(name: "SPEC", defaultValue: "cypress/e2e/**/**", description:"Entrer le chemin des testsà éxecuter")
         choice(name: "BROWSER", choices: ['chrome', 'edge', 'firefox'], description: "Choisir le navigateur")  
@@ -21,8 +18,8 @@ pipeline{
         }
         stage('Testing'){
             steps{
-                sh "npm i"
-                sh "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
+                bat "npm i"
+                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
         }
         stage('Deploy'){
