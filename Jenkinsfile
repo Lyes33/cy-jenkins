@@ -1,7 +1,7 @@
 pipeline{
     agent any
     triggers{
-        cron 'H/5 * * * *'
+        cron 'H/25 * * * *'
    }
     parameters{
         string(name: "SPEC", defaultValue: "cypress/e2e/**/**", description:"Entrer le chemin des testsà éxecuter")
