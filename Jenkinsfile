@@ -31,7 +31,7 @@ pipeline{
 
     post{
         always{
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '']),
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
             emailext (
                 subject: "Pipeline Status: ${JOB_NAME}",
                 body: '''<html>
@@ -46,8 +46,7 @@ pipeline{
                 replyTo: 'jenkins@example.com',
                 mimeType: 'text/html'
                 
-                )
-            }
+            )
         }
     }
 }
